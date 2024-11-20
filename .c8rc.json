@@ -1,0 +1,7 @@
+{
+    "all": true,
+    "cache": false,
+    "include": ["src/**/*"],
+    "exclude": ["test/**/*", "src/index.ts", "src/add-abort-listener/fallback.ts"],
+    "reporter": ["text", "text-summary"]
+}

@@ -1,0 +1,10 @@
+{
+    "extends": "./tsconfig-base.json",
+    "include": ["src/**/*.ts", "src/**/*.mts"],
+    "compilerOptions": {
+        "outDir": "dist/mjs",
+        "paths": {
+            "@SRC/*": ["*.mts", "*/index.mts", "*.ts", "*/index.ts"]
+        }
+    }
+}

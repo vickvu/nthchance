@@ -1,0 +1,19 @@
+{
+    "extends": "./tsconfig-base.json",
+    "include": ["src/**/*.ts", "src/**/*.mts", "test/**/*.ts"],
+    "compilerOptions": {
+        "sourceMap": false,
+        "inlineSourceMap": true,
+        "rootDir": ".",
+        "baseUrl": ".",
+        "outDir": "dist/test",
+        "types": ["node", "mocha"],
+        "paths": {
+            "@SRC/*": ["src/*.mts", "src/*.ts", "src/*/index.ts"],
+            "@TEST/*": ["test/*.ts"]
+        }
+    },
+    "ts-node": {
+        "compiler": "ts-patch/compiler"
+    }
+}

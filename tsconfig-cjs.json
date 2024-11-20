@@ -1,0 +1,11 @@
+{
+    "extends": "./tsconfig-base.json",
+    "include": ["src/**/*.ts", "src/**/*.cts"],
+    "compilerOptions": {
+        "outDir": "dist/cjs",
+        "verbatimModuleSyntax": false,
+        "paths": {
+            "@SRC/*": ["*.cts", "*/index.cts", "*.ts", "*/index.ts"]
+        }
+    }
+}

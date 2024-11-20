@@ -1,0 +1,40 @@
+{
+    "compilerOptions": {
+        "importHelpers": false,
+        "sourceMap": true,
+        "inlineSourceMap": false,
+        "allowJs": false,
+        "allowSyntheticDefaultImports": true,
+        "declaration": true,
+        "esModuleInterop": true,
+        "listEmittedFiles": false,
+        "listFiles": false,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitAny": false,
+        "pretty": true,
+        "resolveJsonModule": false,
+        "skipLibCheck": true,
+        "strict": true,
+        "strictBindCallApply": true,
+        "traceResolution": false,
+        "types": ["node"],
+        "moduleResolution": "NodeNext",
+        "module": "NodeNext",
+        "target": "ES2023",
+        "verbatimModuleSyntax": true,
+        "baseUrl": "src",
+        "rootDir": "src",
+        "typeRoots": ["node_modules/@types"],
+        "plugins": [
+            {
+                "transform": "typescript-transform-path-rewrite"
+            },
+            {
+                "transform": "typescript-transform-path-rewrite",
+                "afterDeclaration": true
+            }
+        ]
+    },
+    "compileOnSave": false,
+    "exclude": ["node_modules", "dist"]
+}

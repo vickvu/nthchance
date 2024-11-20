@@ -1,0 +1,9 @@
+{
+    "loader": ["ts-node/esm"],
+    "require": ["test/chai.ts"],
+    "extension": [".spec.ts"],
+    "enableSourceMaps": true,
+    "recursive": true,
+    "slow": 500,
+    "timeout": 1000
+}

@@ -1,0 +1,78 @@
+{
+    "name": "nthchance",
+    "version": "1.0.0",
+    "description": "Retry a promise based function",
+    "author": "Vick Vu",
+    "contributors": [],
+    "keywords": [
+        "retry",
+        "promise",
+        "async",
+        "backoff"
+    ],
+    "homepage": "https://github.com/vickvu/nthchance#readme",
+    "bugs": {
+        "url": "https://github.com/vickvu/nthchance/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vickvu/nthchance.git"
+    },
+    "license": "MIT",
+    "engines": {
+        "node": ">=16"
+    },
+    "type": "module",
+    "main": "dist/cjs/index.js",
+    "module": "dist/mjs/index.js",
+    "types": "dist/mjs/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/mjs/index.js",
+            "require": "./dist/cjs/index.js"
+        }
+    },
+    "scripts": {
+        "build": "make build",
+        "build:test": "make dist/test",
+        "prepublishOnly": "npm run build",
+        "lint": "eslint",
+        "lint:fix": "eslint --fix",
+        "prettier": "prettier --check .",
+        "prettier:fix": "prettier --write .",
+        "pretest": "npm run prettier && npm run lint",
+        "test:unit": "node --enable-source-maps node_modules/mocha/bin/mocha.js",
+        "test": "c8 node --enable-source-maps node_modules/mocha/bin/mocha.js"
+    },
+    "files": [
+        "dist"
+    ],
+    "devDependencies": {
+        "@eslint/js": "^9.15.0",
+        "@types/chai": "^5.0.1",
+        "@types/chai-as-promised": "^8.0.1",
+        "@types/eslint__js": "^8.42.3",
+        "@types/mocha": "^10.0.9",
+        "@types/node": "^22.9.0",
+        "@types/sinon": "^17.0.3",
+        "@typescript-eslint/eslint-plugin": "^8.15.0",
+        "@typescript-eslint/parser": "^8.15.0",
+        "c8": "^10.1.2",
+        "chai": "^5.1.2",
+        "chai-as-promised": "^8.0.0",
+        "eslint": "^9.15.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-mocha": "^10.5.0",
+        "mocha": "^10.8.2",
+        "prettier": "^3.3.3",
+        "sinon": "^19.0.2",
+        "ts-node": "^10.9.2",
+        "ts-patch": "^3.2.1",
+        "typescript": "^5.6.3",
+        "typescript-eslint": "^8.15.0",
+        "typescript-transform-path-rewrite": "^1.4.0"
+    },
+    "dependencies": {
+        "browser-or-node": "^3.0.0"
+    }
+}
